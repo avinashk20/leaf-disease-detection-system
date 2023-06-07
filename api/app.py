@@ -109,6 +109,17 @@ def main():
 
     predictions = model.predict(x)
     class_idx = np.argmax(predictions[0])
+    confidence_score = predictions[0][class_idx] * 100
+
+    ## confidence scores 
+    # for i, pred in enumerate(predictions[0]):
+    #     class_label = class_names[i]
+    #     confidence = pred * 100
+    #     print(f"{class_label}: {confidence:.2f}%")
+
+    print("confidence: ", confidence_score)
+    confidence = "{:.2f}".format(confidence_score)
+
     if class_idx == 14 or class_idx == 4 or class_idx == 1:
         predicted_disease = "No disease detected (Healthy Leaf)"
         treatment = []
@@ -118,6 +129,7 @@ def main():
 
     return render_template(
         "result.html",
+        confidence=confidence,
         filename=newfilename,
         predicted_disease=predicted_disease,
         treatment=treatment,
