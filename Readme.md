@@ -4,6 +4,11 @@
 
 This project focuses on the detection of plant leaf diseases using a machine learning model. The system utilizes pre-trained models such as Inception V3 and VGG16 on the Plant Village dataset. Transfer learning was applied, and the model weights were fine-tuned, resulting in high accuracies of 97% and 98%.
 
+## Screenshots
+
+![home page](/screenshots/home.jpg)
+![result page](/screenshots/result.jpg)
+
 ## Features
 
 - **Machine Learning Model:**
@@ -18,7 +23,4 @@ This project focuses on the detection of plant leaf diseases using a machine lea
   - Allows users to upload leaf images for disease detection.
   - Provides quick and accurate results for uploaded images.
 
-## Screenshots
 
-![home page](/screenshots/home.jpg)
-![result page](/screenshots/result.jpg)
